@@ -1,0 +1,15 @@
+C:\DevDemos\Netwealth\NetWealth.Services\bin\Release\net5.0\NetWealth.Services.deps.json
+C:\DevDemos\Netwealth\NetWealth.Services\bin\Release\net5.0\NetWealth.Services.dll
+C:\DevDemos\Netwealth\NetWealth.Services\bin\Release\net5.0\NetWealth.Services.pdb
+C:\DevDemos\Netwealth\NetWealth.Services\bin\Release\net5.0\NetWealth.Data.Models.dll
+C:\DevDemos\Netwealth\NetWealth.Services\bin\Release\net5.0\NetWealth.Data.Models.pdb
+C:\DevDemos\Netwealth\NetWealth.Services\obj\Release\net5.0\NetWealth.Services.csproj.AssemblyReference.cache
+C:\DevDemos\Netwealth\NetWealth.Services\obj\Release\net5.0\NetWealth.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\DevDemos\Netwealth\NetWealth.Services\obj\Release\net5.0\NetWealth.Services.AssemblyInfoInputs.cache
+C:\DevDemos\Netwealth\NetWealth.Services\obj\Release\net5.0\NetWealth.Services.AssemblyInfo.cs
+C:\DevDemos\Netwealth\NetWealth.Services\obj\Release\net5.0\NetWealth.Services.csproj.CoreCompileInputs.cache
+C:\DevDemos\Netwealth\NetWealth.Services\obj\Release\net5.0\NetWealth.Services.csproj.CopyComplete
+C:\DevDemos\Netwealth\NetWealth.Services\obj\Release\net5.0\NetWealth.Services.dll
+C:\DevDemos\Netwealth\NetWealth.Services\obj\Release\net5.0\refint\NetWealth.Services.dll
+C:\DevDemos\Netwealth\NetWealth.Services\obj\Release\net5.0\NetWealth.Services.pdb
+C:\DevDemos\Netwealth\NetWealth.Services\obj\Release\net5.0\ref\NetWealth.Services.dll
