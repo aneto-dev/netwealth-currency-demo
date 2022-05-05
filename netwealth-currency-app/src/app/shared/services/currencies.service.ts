@@ -27,7 +27,7 @@ export class CurrenciesService {
       let headers: HttpHeaders = new HttpHeaders();
       headers = headers.append('apikey', this.key);
 
-      return this.http.get<Country[]>(this.apiUrl + "/currency",{headers:  headers }  )
+      return this.http.get<Country[]>(this.apiUrl + "/currency/country",{headers:  headers }  )
         .pipe(
         tap(_ => this.log('fetched countries')),
         catchError(this.handleError<Country[]>('getCountries', []))
@@ -36,26 +36,16 @@ export class CurrenciesService {
 
   convertCurrency(postData: CurrencyRequestModel): Observable<Country[]>{
 
-   
-
-    let headers: HttpHeaders = new HttpHeaders();
+     let headers: HttpHeaders = new HttpHeaders();
      headers = headers.append('apikey', this.key);
 
-      return this.http.post<Country[]>( this.apiUrl + "/currency", postData, 
+      return this.http.post<Country[]>( this.apiUrl + "/currency/convert", postData, 
       {headers:  headers }  )
         .pipe(
         tap(_ => this.log('fetched countries')),
         catchError(this.handleError<Country[]>('getCountries', []))
       );
   }
-
-  /** POST: add a new hero to the server */
-// addHero(hero: Hero): Observable<Hero> {
-//   return this.http.post<Hero>(this.heroesUrl, hero, this.httpOptions).pipe(
-//     tap((newHero: Hero) => this.log(`added hero w/ id=${newHero.id}`)),
-//     catchError(this.handleError<Hero>('addHero'))
-//   );
-// }
 
     /**
    * Handle Http operation that failed.

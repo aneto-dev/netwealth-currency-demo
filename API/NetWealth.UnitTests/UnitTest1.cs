@@ -12,7 +12,6 @@ namespace NetWealth.UnitTests
         public void Test1()
         {
             var mockMediatr = new Mock<IMediator>();
-           // mockMediatr.Setup(m => m.Send(It.IsAny(), It.IsAny())).Returns(async (GetBlockedCustomersAndGroupsQuery q, CancellationToken token) => await _getBlockedCustomersAndGroupsHandler.Handle(new GetBlockedCustomersAndGroupsQuery { Active = q.Active }, token));
         }
     }
 }

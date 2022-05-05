@@ -23,7 +23,7 @@ namespace NetWealth.Currency.API.Controllers
         }
 
         [EnableCors("CurrencyPolicy")]
-        [HttpGet]
+        [HttpGet("country")]
         public async Task<IActionResult> GetCountriesCurrencies()
         {
             var allCountryCurrencyDto = await _mediator.Send(new GetAllCountryCurrencyQuery());
@@ -35,7 +35,7 @@ namespace NetWealth.Currency.API.Controllers
         }
 
         [EnableCors("CurrencyPolicy")]
-        [HttpPost]
+        [HttpPost("convert")]
         public async Task<IActionResult> ConvertToCurrency([FromBody] CurrencyConverterCommand currencyConverterRequest)
         {
             if (currencyConverterRequest == null)
