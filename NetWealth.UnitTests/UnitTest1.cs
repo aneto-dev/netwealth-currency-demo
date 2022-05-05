@@ -1,5 +1,6 @@
 using System;
 using System.Threading;
+using MediatR;
 using Xunit;
 using Moq;
 
