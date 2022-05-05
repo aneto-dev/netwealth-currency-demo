@@ -21,6 +21,7 @@ namespace NetWealth.Currency.API
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
-                });
+                }).UseDefaultServiceProvider(options =>
+                    options.ValidateScopes = false);
     }
 }

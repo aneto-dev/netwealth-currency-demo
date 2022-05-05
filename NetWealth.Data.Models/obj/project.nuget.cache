@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "lvIfZ+ujGntBv71z+WHFCn+KD5LBC8FAbFUSiAW4kinEr7VYDjOUfV/fWqtTq3sRdch8rRPaEGF/7lcftBdEVw==",
+  "dgSpecHash": "1nUA4uuCYoF6X8ewXzoJ5O1vPFVuv4G9fcVGakyduZSJl6onIqXiyAuiKaqadOlWM+ppV0nBgjcpxv0QzpTRgQ==",
   "success": true,
   "projectFilePath": "C:\\DevDemos\\Netwealth\\NetWealth.Data.Models\\NetWealth.Data.Models.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\aires.neto\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
+    "C:\\Users\\aires.neto\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

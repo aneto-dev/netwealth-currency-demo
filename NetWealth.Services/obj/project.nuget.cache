@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "JZVc1lbpqccT84HLHF7Nt7ZqU9HPSKE+PCsYorMogFbuXx5vpy8tIz0BVdQpEga1El3hja3x9duq1IJpoD4BoQ==",
+  "success": true,
+  "projectFilePath": "C:\\DevDemos\\Netwealth\\NetWealth.Services\\NetWealth.Services.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\aires.neto\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
+    "C:\\Users\\aires.neto\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
+    "C:\\Users\\aires.neto\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\aires.neto\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
+    "C:\\Users\\aires.neto\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
+    "C:\\Users\\aires.neto\\.nuget\\packages\\restsharp\\107.3.1-alpha.0.24\\restsharp.107.3.1-alpha.0.24.nupkg.sha512",
+    "C:\\Users\\aires.neto\\.nuget\\packages\\system.text.json\\5.0.0\\system.text.json.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

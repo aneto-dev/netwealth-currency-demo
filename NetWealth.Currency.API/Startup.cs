@@ -12,11 +12,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
+using AutoMapper;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
+using NetWealth.Currency.API.Mapping;
 using Netwealth.Data;
 using NetWealth.Data;
+using NetWealth.Data.Models.Command;
+//using NetWealth.Data.Models.Command;
+using NetWealth.Data.Models.Utility;
+using NetWealth.Domain;
+using NetWealth.Repositories;
+using NetWealth.Repositories.Implementation;
+using Netwealth.Services;
+using NetWealth.Services;
 
 namespace NetWealth.Currency.API
 {
@@ -42,33 +52,51 @@ namespace NetWealth.Currency.API
             services.AddDbContext<NetwealthDbContext>(options =>
                 options.UseSqlServer(
                     configuration.GetConnectionString("AzureConnectionString")));
-            services.AddTransient<NetWealthDbSeeder>();
-
+            
             //Configure Currency Api Settings
             services.Configure<CurrencyConverterSettings>(Configuration.GetSection("CurrencyConverterSettings"));
+
+            services.AddControllersWithViews()
+                .AddNewtonsoftJson(options =>
+                    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+                );
+
+            //AutoMapper
+
+            services.AddSingleton<Profile, DtoMappingProfile>();
+            services.AddSingleton(provider =>
+            {
+                var config = new MapperConfiguration(cfg =>
+                {
+                    var profiles = provider.GetServices<Profile>();
+                    foreach (var profile in profiles)
+                    {
+                        cfg.AddProfile(profile);
+                    }
+                });
+                return config.CreateMapper();
+            });
+
+            services.AddTransient<NetWealthDbSeeder>();
 
             // ALLOW CORS (ONLY FOR ANGULAR DEBUG)
             var azureCorsUrl = Configuration.GetSection("AzureWebApiUrl").Value;
             services.AddCors(o => o.AddPolicy("CurrencyPolicy", builder =>
             {
-                
                 builder.WithOrigins(azureCorsUrl).AllowAnyOrigin()
                     .AllowAnyMethod()
                     .AllowAnyHeader();
             }));
 
-            //services.AddMediatR(typeof(CurrencyConverterCommand).GetTypeInfo().Assembly);
-
-
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            //services.RegisterRequestHandlers();
+            services.RegisterRequestHandlers();
 
+            services.AddMediatR(typeof(CurrencyConverterCommand).GetTypeInfo().Assembly);
 
-            //services.AddScoped(typeof(ICurrencyConverterService), typeof(CurrencyConverterService));
-
+            services.AddScoped(typeof(ICurrencyConverterService), typeof(CurrencyConverterService));
+            services.AddScoped(typeof(ICountryCurrencyRepository), typeof(CountryCurrencyRepository));
 
             services.AddControllers();
-          
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -9,9 +9,6 @@ namespace Netwealth.Data
         public NetwealthDbContext(DbContextOptions<NetwealthDbContext> options) : base(options)
         { }
 
-        public DbSet<Country> Countries { get; set; }
-
-        public DbSet<Currency> Currencies { get; set; }
-
+        public DbSet<CountryCurrency> CountryCurrencies { get; set; }
     }
 }

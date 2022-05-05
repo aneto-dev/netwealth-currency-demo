@@ -31,7 +31,7 @@ namespace NetWealth.Data
             await _ctx.Database.EnsureCreatedAsync();
 
             // Seed data from Api if Table is Empty
-            if (!_ctx.Countries.Any())
+            if (!_ctx.CountryCurrencies.Any())
             {
                 var uri = new Uri($"{_currencyConverterSettings.BaseUrl}symbols");
                 var client = new RestClient(uri);
@@ -45,26 +45,26 @@ namespace NetWealth.Data
 
                 var sites = ((JObject)json["symbols"]).Properties();
 
-                var seedCountries = new List<Country>();    
+                var seedCountries = new List<CountryCurrency>();
 
                 foreach (var data in (JObject)json["symbols"])
                 {
                     var key = data.Key;
                     var value = data.Value;
 
-                    var country = new Country()
+                    var country = new CountryCurrency()
                     {
-                        Code = key, 
-                        Name = value.ToString(Formatting.None),
+                        Code = key,
+                        Name = value.ToString(),
                     };
 
                     seedCountries.Add(country);
 
                 }
 
-                await _ctx.Countries.AddRangeAsync(seedCountries);
+                await _ctx.CountryCurrencies.AddRangeAsync(seedCountries);
 
-                await _ctx.SaveChangesAsync();   
+                await _ctx.SaveChangesAsync();
 
             }
         }
