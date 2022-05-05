@@ -1,0 +1,59 @@
+.ezbfAz {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.jApTut {
+    width: 100%;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 6px;
+    box-shadow: rgb(0 17 51 / 5%) 0px 3px 15px;
+    padding: 12px;
+    color: rgb(20, 30, 55);
+    background: none;
+}
+
+.jdUeRL {
+    display: grid;
+    gap: 4px 16px;
+    grid-auto-flow: column;
+    grid-template-columns: minmax(100px, 1fr) minmax(100px, 1fr) auto minmax(100px, 1fr);
+    grid-template-rows: auto [input-row-start] auto [input-row-end] auto;
+}
+
+.jdUeRL {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.fZJuOo {
+    width: 16px;
+    height: 16px;
+    color: rgb(0, 108, 224);
+    transform: rotate(180deg);
+}
+
+
+.kDuZbJ {
+    display: inline-flex;
+    background: none;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 50%;
+    padding: 16px;
+}
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+    appearance: button;
+    cursor: pointer;
+}
+
+.currency-grid-container
+{
+  display: -webkit-inline-box;
+}
