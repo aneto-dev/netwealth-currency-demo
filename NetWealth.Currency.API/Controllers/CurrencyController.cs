@@ -4,12 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using MediatR;
 using Microsoft.AspNetCore.Cors;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using NetWealth.Data.Entities;
-using NetWealth.Data.Models.Command;
-//using NetWealth.Data.Models.Command;
 using NetWealth.Domain;
 
 namespace NetWealth.Currency.API.Controllers
@@ -31,6 +27,10 @@ namespace NetWealth.Currency.API.Controllers
         public async Task<IActionResult> GetCountriesCurrencies()
         {
             var allCountryCurrencyDto = await _mediator.Send(new GetAllCountryCurrencyQuery());
+
+            if (allCountryCurrencyDto == null)
+                return StatusCode(500, "There was an error retrieving Country Currency Codes");
+
             return Ok(allCountryCurrencyDto);
         }
 
@@ -38,6 +38,14 @@ namespace NetWealth.Currency.API.Controllers
         [HttpPost]
         public async Task<IActionResult> ConvertToCurrency([FromBody] CurrencyConverterCommand currencyConverterRequest)
         {
+            if (currencyConverterRequest == null)
+                return BadRequest("No data requested");
+            if (currencyConverterRequest.ToCurrencyReference == null)
+                return BadRequest("Currency to be converted should be set");
+            if (currencyConverterRequest.FromCurrencyReference == null)
+                return BadRequest("Base Currency should be set");
+
+
             var currencyConverterResponse = await CommandAsync(currencyConverterRequest);
             return Ok(currencyConverterResponse);
         }

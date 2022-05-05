@@ -35,6 +35,9 @@ namespace NetWealth.Currency.API.Middleware
                 await context.Response.WriteAsync("Unauthorized client. Invalid Api Key");
                 return;
             }
+
+            //TODO: A
+
             //var token = context.Request.Headers["Authorization"].FirstOrDefault()?.Split(" ").Last();
             //var userId = jwtUtils.ValidateJwtToken(token);
 

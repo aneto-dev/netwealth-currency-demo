@@ -77,3 +77,4 @@ C:\DevDemos\Netwealth\NetWealth.Currency.API\obj\Release\net5.0\refint\NetWealth
 C:\DevDemos\Netwealth\NetWealth.Currency.API\obj\Release\net5.0\NetWealth.Currency.API.pdb
 C:\DevDemos\Netwealth\NetWealth.Currency.API\obj\Release\net5.0\NetWealth.Currency.API.genruntimeconfig.cache
 C:\DevDemos\Netwealth\NetWealth.Currency.API\obj\Release\net5.0\ref\NetWealth.Currency.API.dll
+C:\DevDemos\Netwealth\NetWealth.Currency.API\bin\Release\net5.0\AspNetCoreRateLimit.dll

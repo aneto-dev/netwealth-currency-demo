@@ -4,6 +4,7 @@ C:\DevDemos\Netwealth\NetWealth.Currency.API\obj\Release\net5.0\PubTmp\Out\appse
 C:\DevDemos\Netwealth\NetWealth.Currency.API\obj\Release\net5.0\PubTmp\Out\NetWealth.Currency.API.dll
 C:\DevDemos\Netwealth\NetWealth.Currency.API\obj\Release\net5.0\PubTmp\Out\NetWealth.Currency.API.runtimeconfig.json
 C:\DevDemos\Netwealth\NetWealth.Currency.API\obj\Release\net5.0\PubTmp\Out\NetWealth.Currency.API.pdb
+C:\DevDemos\Netwealth\NetWealth.Currency.API\obj\Release\net5.0\PubTmp\Out\AspNetCoreRateLimit.dll
 C:\DevDemos\Netwealth\NetWealth.Currency.API\obj\Release\net5.0\PubTmp\Out\AutoMapper.dll
 C:\DevDemos\Netwealth\NetWealth.Currency.API\obj\Release\net5.0\PubTmp\Out\MediatR.dll
 C:\DevDemos\Netwealth\NetWealth.Currency.API\obj\Release\net5.0\PubTmp\Out\MediatR.Contracts.dll

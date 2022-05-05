@@ -1,6 +1,5 @@
-# netwealth-currency-demo
 
-# Angular, ASP.NET Core Currency Converter Application
+# Angular/ASP.NET Core Currency Converter Demo Application 
 
 This project demonstrates how Angular and ASP.NET Core can be used together.
 
