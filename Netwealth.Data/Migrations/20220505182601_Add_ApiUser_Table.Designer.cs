@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Netwealth.Data;
 
 namespace NetWealth.Data.Migrations
 {
     [DbContext(typeof(NetwealthDbContext))]
-    partial class NetwealthDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220505182601_Add_ApiUser_Table")]
+    partial class Add_ApiUser_Table
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

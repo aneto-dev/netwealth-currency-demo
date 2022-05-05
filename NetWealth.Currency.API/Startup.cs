@@ -12,11 +12,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
+using AspNetCoreRateLimit;
 using AutoMapper;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using NetWealth.Currency.API.Mapping;
+using NetWealth.Currency.API.Middleware;
 using Netwealth.Data;
 using NetWealth.Data;
 using NetWealth.Data.Models.Command;
@@ -27,6 +29,7 @@ using NetWealth.Repositories;
 using NetWealth.Repositories.Implementation;
 using Netwealth.Services;
 using NetWealth.Services;
+using QUBE.Web.API.Services;
 
 namespace NetWealth.Currency.API
 {
@@ -95,6 +98,16 @@ namespace NetWealth.Currency.API
 
             services.AddScoped(typeof(ICurrencyConverterService), typeof(CurrencyConverterService));
             services.AddScoped(typeof(ICountryCurrencyRepository), typeof(CountryCurrencyRepository));
+            services.AddScoped(typeof(IUserService), typeof(UserService));
+            // configure ip rate limiting middleware
+            services.Configure<IpRateLimitOptions>(Configuration.GetSection("IpRateLimiting"));
+            services.AddInMemoryRateLimiting();
+            services.AddMvc((options) =>
+            {
+                options.EnableEndpointRouting = false;
+
+            }).AddNewtonsoftJson();
+            services.AddSingleton<IRateLimitConfiguration, RateLimitConfiguration>();
 
             services.AddControllers();
         }
@@ -120,6 +133,12 @@ namespace NetWealth.Currency.API
             app.UseCors("CurrencyPolicy");
 
             app.UseAuthorization();
+
+            // global error handler
+            app.UseMiddleware<ErrorHandlerMiddleware>();
+
+            // custom jwt auth middleware
+            app.UseMiddleware<ApiKeyMiddleware>();
 
             app.UseEndpoints(endpoints =>
             {

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "3Ov96NDbN+P6PupkU+xIgQkowuKNwSoi+yU5i5SoMGTv4sel4ENPfQJlY+r9vuEuDzG0RRbblay0qo6PsZsUvA==",
+  "dgSpecHash": "1+yr2y9QiT8qUtTOSgCITOV776cuZ4me5uVgyaO0/yHkD5z3BrBtuXCgOvZzhj3LPVGb2SSklm8ltubMJmGKdA==",
   "success": true,
   "projectFilePath": "C:\\DevDemos\\Netwealth\\NetWealth.Currency.API\\NetWealth.Currency.API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\aires.neto\\.nuget\\packages\\aspnetcoreratelimit\\4.0.2\\aspnetcoreratelimit.4.0.2.nupkg.sha512",
     "C:\\Users\\aires.neto\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\aires.neto\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\aires.neto\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",

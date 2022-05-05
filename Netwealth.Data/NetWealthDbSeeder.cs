@@ -30,6 +30,20 @@ namespace NetWealth.Data
         {
             await _ctx.Database.EnsureCreatedAsync();
 
+
+            if (!_ctx.ApiUsers.Any())
+            {
+                var user = new ApiUser()
+                {
+                    UserId = 12342,
+                    Key = "19UbxmHgUZKryFLxQHV6VMzTP1bke7L0"
+                };
+
+                await _ctx.ApiUsers.AddAsync(user);
+
+                await _ctx.SaveChangesAsync();
+            }
+
             // Seed data from Api if Table is Empty
             if (!_ctx.CountryCurrencies.Any())
             {

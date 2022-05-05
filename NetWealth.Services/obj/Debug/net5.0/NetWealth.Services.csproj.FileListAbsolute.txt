@@ -13,3 +13,5 @@ C:\DevDemos\Netwealth\NetWealth.Services\obj\Debug\net5.0\NetWealth.Services.dll
 C:\DevDemos\Netwealth\NetWealth.Services\obj\Debug\net5.0\refint\NetWealth.Services.dll
 C:\DevDemos\Netwealth\NetWealth.Services\obj\Debug\net5.0\NetWealth.Services.pdb
 C:\DevDemos\Netwealth\NetWealth.Services\obj\Debug\net5.0\ref\NetWealth.Services.dll
+C:\DevDemos\Netwealth\NetWealth.Services\bin\Debug\net5.0\NetWealth.Data.dll
+C:\DevDemos\Netwealth\NetWealth.Services\bin\Debug\net5.0\NetWealth.Data.pdb

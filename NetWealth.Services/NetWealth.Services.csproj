@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\NetWealth.Data.Models\NetWealth.Data.Models.csproj" />
+    <ProjectReference Include="..\Netwealth.Data\NetWealth.Data.csproj" />
   </ItemGroup>
 
 </Project>

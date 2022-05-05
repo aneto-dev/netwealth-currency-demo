@@ -336,6 +336,9 @@
             "projectReferences": {
               "C:\\DevDemos\\Netwealth\\NetWealth.Data.Models\\NetWealth.Data.Models.csproj": {
                 "projectPath": "C:\\DevDemos\\Netwealth\\NetWealth.Data.Models\\NetWealth.Data.Models.csproj"
+              },
+              "C:\\DevDemos\\Netwealth\\Netwealth.Data\\NetWealth.Data.csproj": {
+                "projectPath": "C:\\DevDemos\\Netwealth\\Netwealth.Data\\NetWealth.Data.csproj"
               }
             }
           }

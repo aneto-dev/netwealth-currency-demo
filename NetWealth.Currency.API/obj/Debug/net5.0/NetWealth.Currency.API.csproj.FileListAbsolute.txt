@@ -77,3 +77,4 @@ C:\DevDemos\Netwealth\NetWealth.Currency.API\bin\Debug\net5.0\NetWealth.Reposito
 C:\DevDemos\Netwealth\NetWealth.Currency.API\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
 C:\DevDemos\Netwealth\NetWealth.Currency.API\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\DevDemos\Netwealth\NetWealth.Currency.API\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+C:\DevDemos\Netwealth\NetWealth.Currency.API\bin\Debug\net5.0\AspNetCoreRateLimit.dll

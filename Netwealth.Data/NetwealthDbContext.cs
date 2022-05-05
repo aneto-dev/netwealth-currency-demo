@@ -10,5 +10,7 @@ namespace Netwealth.Data
         { }
 
         public DbSet<CountryCurrency> CountryCurrencies { get; set; }
+
+        public DbSet<ApiUser> ApiUsers { get; set; }
     }
 }
