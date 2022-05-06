@@ -1,23 +1,13 @@
 ﻿#pragma warning disable CA1416 // Validate platform compatibility
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 using Netwealth.Data;
 using NetWealth.Data.Entities;
+using QUBE.Web.API.Services;
 
-namespace QUBE.Web.API.Services
+namespace NetWealth.Services.Implementation
 {
-    public interface IUserService
-    {
-        public Task<ApiUser> GetValidUserByKey(string apiKey);
-        public Task<ApiUser> GetValidUserById(long userId);
-        Task<List<ApiUser> >GetAll();
-       // TblUser GetById(int id);
-    }
-
     public class UserService : IUserService
     {
         private NetwealthDbContext _context;

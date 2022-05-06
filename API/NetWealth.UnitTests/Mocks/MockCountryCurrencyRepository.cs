@@ -15,8 +15,7 @@ namespace NetWealth.UnitTests.Mocks
         {
             var list = new List<CountryCurrency>()
             {
-
-                 new CountryCurrency() { Code = "EUR", Name = "Euros_TEST", Reference = 1}, 
+                new CountryCurrency() { Code = "EUR", Name = "Euros_TEST", Reference = 1}, 
                  new CountryCurrency() { Code = "USD", Name = "US Dollars_TEST", Reference = 2},
                  new CountryCurrency() { Code = "JPY", Name = "Japanese Yen_TEST", Reference = 3},
                  new CountryCurrency() { Code = "GBP", Name = "British Pounds_TEST", Reference = 4},

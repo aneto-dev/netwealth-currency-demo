@@ -22,13 +22,13 @@ using NetWealth.Currency.API.Middleware;
 using Netwealth.Data;
 using NetWealth.Data;
 using NetWealth.Data.Models.Command;
-//using NetWealth.Data.Models.Command;
 using NetWealth.Data.Models.Utility;
 using NetWealth.Domain;
 using NetWealth.Repositories;
 using NetWealth.Repositories.Implementation;
 using Netwealth.Services;
 using NetWealth.Services;
+using NetWealth.Services.Implementation;
 using QUBE.Web.API.Services;
 
 namespace NetWealth.Currency.API

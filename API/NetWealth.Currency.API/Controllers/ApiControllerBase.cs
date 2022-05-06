@@ -12,7 +12,7 @@ namespace NetWealth.Currency.API.Controllers
     public class ApiControllerBase : ControllerBase
     {
         private readonly IMediator _mediator;
-        private readonly ILogger<CurrencyController> _logger;
+        protected ILogger<CurrencyController> _logger;
 
         public ApiControllerBase(IMediator mediator, ILogger<CurrencyController> logger)
         {

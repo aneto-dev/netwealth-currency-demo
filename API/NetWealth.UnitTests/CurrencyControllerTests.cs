@@ -102,11 +102,29 @@ namespace NetWealth.UnitTests
                     _mapper,_mockLogger.Object);
             var result = await handler.Handle(new GetAllCountryCurrencyQuery(), CancellationToken.None);
 
+            result.ShouldBeOfType<List<CountryCurrencyDto>>();
+
             result.Count.ShouldBe(4);
+        }
+
+
+        [Fact]
+        public async void GetCountriesCurrencies_ActionExecutes_ReturnsDifferentNumberOfCurrencyCountries()
+        {
+
+            var handler =
+                new GetAllCountryCurrencyQuery.GetAllCountryCurrencyQueryHandler(_mockCountryCurrencyRepository.Object,
+                    _mapper, _mockLogger.Object);
+            var result = await handler.Handle(new GetAllCountryCurrencyQuery(), CancellationToken.None);
+
 
             result.ShouldBeOfType<List<CountryCurrencyDto>>();
+
+            result.Count.ShouldNotBe(3);
         }
-        
+
+
+
         [Fact]
         public void GetCountriesCurrencies_ActionExecutes_Verify()
         {
