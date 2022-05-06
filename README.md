@@ -6,9 +6,9 @@ This project demonstrates how Angular and ASP.NET Core can be used together.
 ## Run Locally
 
 * The project will run and can be debuged on the angular (netwealth-currency)
-* The angular project will make calls to a second main project (NetWealth.Currency.API) which is an API project using .Net Core 5.0
+* The angular project will make calls to a second main project (API/NetWealth.Currency.API) which is an API project using .Net Core 5.0
 * The API was deplyed in Azure cloud and it has public access ("https://netwealthcurrencyapi.azurewebsites.net") ... for porpose of this demo only
-
+* The Web Applicatiion is also deployed in Azure - https://currencyconverterapp.azurewebsites.net/
 ### Running the API
 
 1. The API has 2 endpoints
