@@ -5,7 +5,7 @@ This project demonstrates how Angular and ASP.NET Core can be used together.
 
 ## Run Locally
 
-* The project will run and can be debuged on the angular (netwealth-currency)
+* The project will run and can be debuged client-side (netwealth-currency-app)
 * The angular project will make calls to a second main project (API/NetWealth.Currency.API) which is an API project using .Net Core 5.0
 * The API was deployed in Azure and it has public access ("https://netwealthcurrencyapi.azurewebsites.net") - for porpose of this demo only
 * The Web Application is also deployed in Azure - https://currencyconverterapp.azurewebsites.net/
@@ -16,7 +16,7 @@ This project demonstrates how Angular and ASP.NET Core can be used together.
 
    ## HTTP request GET /currency/country
    * GetCountriesCurrencies 
-        - gets all the current symbol currency codes of a given country. This data is stored and is fetched in an Azure Database that was also created for purposes of this demo.
+        - gets all the current symbol currency codes of a given country. This data is stored and is fetched from an Azure Database that was also created for purposes of this demo.
 
    ## HTTP request POST /currency/convert
    * ConvertToCurrency  
@@ -24,7 +24,7 @@ This project demonstrates how Angular and ASP.NET Core can be used together.
 
 2. API Key
 
-   * A unique key was added in order to access the endpoints ... this is to ensure that if this endpoint was to be given to anyone they would need a key to access data
+   * A unique key was added in order to access the endpoints. This is to ensure that if this endpoint was to be given to anyone they would need a key to access data
 
    * API KEY  - 19UbxmHgUZKryFLxQHV6VMzTP1bke7L0
 
