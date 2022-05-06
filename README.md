@@ -35,5 +35,5 @@ This project demonstrates how Angular and ASP.NET Core can be used together.
 * A second layer of authentication/security could be added using a token that could be refeshed in a given span time
 * Roles could also be added to the api to restrict specific users to accces certain endpoints  (assuming that potentially more could be added) 
 * More frontend styling
-* More frontend testing
+* More testing scenarios (backend/frontend)
 
