@@ -36,7 +36,7 @@ namespace NetWealth.Currency.API.Controllers
             {
                 var message = "There was an error retrieving Country Currency Codes";
                 _logger.LogError($"Status Code {HttpStatusCode.InternalServerError.GetHashCode()} -{message}");
-                return StatusCode(500, "There was an error retrieving Country Currency Codes");
+                return StatusCode(500, message);
             }
 
             return Ok(allCountryCurrencyDto);
