@@ -46,23 +46,37 @@ namespace NetWealth.Currency.API.Controllers
         [HttpPost("convert")]
         public async Task<IActionResult> ConvertToCurrency([FromBody] CurrencyConverterCommand currencyConverterRequest)
         {
+            List<string> errorMessages = new List<string>();
             if (currencyConverterRequest == null)
             {
                 var message = "No data requested";
+                errorMessages.Add(message); 
                 _logger.LogError($"Status Code {HttpStatusCode.NoContent.GetHashCode()} - {message}");
                 return BadRequest(message);
             }
-            if (currencyConverterRequest.ToCurrencyReference == null)
+
+            if (currencyConverterRequest.Amount > 0)
+            {
+                var message = "Amount must be set";
+                _logger.LogError($"Status Code { HttpStatusCode.BadRequest.GetHashCode() } - {message}");
+                errorMessages.Add(message);
+            }
+            if (String.IsNullOrEmpty(currencyConverterRequest.ToCurrencyReference))
             {
                 var message = "Base Currency must be set";
                 _logger.LogError($"Status Code { HttpStatusCode.BadRequest.GetHashCode() } - {message}");
-                return BadRequest(message);
+                errorMessages.Add(message);
             }
-            if (currencyConverterRequest.FromCurrencyReference == null)
+            if (String.IsNullOrEmpty(currencyConverterRequest.FromCurrencyReference))
             {
                 var message = " Base Currency must be set";
                 _logger.LogError($"Status Code {HttpStatusCode.BadRequest.GetHashCode()} - {message}");
-                return BadRequest(message);
+                errorMessages.Add(message);
+            }
+
+            if (errorMessages.Count > 0)
+            {
+                return BadRequest(String.Join('/', errorMessages.ToArray()));
             }
 
             CurrencyConverterResponse currencyConverterResponse;

@@ -25,7 +25,7 @@
                 <form (ngSubmit)="onSubmit()" #currencyConverteroForm="ngForm">
               <div class="form-group col-sm" style="display: inline-block; margin: 10px;">
                 <label for="baseCurrency">Amount</label>
-                <input type="number" min="0.00" class="form-control" id="amount" style="width: 120px;" step="0.01"
+                <input type="number" min="1.00" class="form-control" id="amount" style="width: 120px;" step="0.01"
                   required
                   [(ngModel)]="model.amount" name="amount"
                   #name="ngModel"
