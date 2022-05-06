@@ -7,14 +7,20 @@ This project demonstrates how Angular and ASP.NET Core can be used together.
 
 * The project will run and can be debuged on the angular (netwealth-currency)
 * The angular project will make calls to a second main project (API/NetWealth.Currency.API) which is an API project using .Net Core 5.0
-* The API was deplyed in Azure cloud and it has public access ("https://netwealthcurrencyapi.azurewebsites.net") ... for porpose of this demo only
+* The API was deployed in Azure and it has public access ("https://netwealthcurrencyapi.azurewebsites.net") - for porpose of this demo only
 * The Web Applicatiion is also deployed in Azure - https://currencyconverterapp.azurewebsites.net/
+
 ### Running the API
 
 1. The API has 2 endpoints
 
-   * GetCountriesCurrencies - gets all the current symbol currency codes of a given country. This data is stored and is fetched in an Azure Database that was also created for purposes of this demo.
-   * ConvertToCurrency  -  claculates/conveters any given available currency using the https://fixer.io/ to fectch live data 
+   ## HTTP request GET /currency/country
+   * GetCountriesCurrencies 
+        - gets all the current symbol currency codes of a given country. This data is stored and is fetched in an Azure Database that was also created for purposes of this demo.
+        
+   ## HTTP request POST /currency/convert
+   * ConvertToCurrency  
+        - claculates/conveters any given available currency using the https://fixer.io/ to fectch live data 
 
 2. API Key
 
