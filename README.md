@@ -30,7 +30,7 @@ This project demonstrates how Angular and ASP.NET Core can be used together.
 
    * This key is also stored in the Azure DB so it can matched against (if needed)
 
-### More Improvments (If given more time)
+### Improvments (If given more time)
 
 * A second layer of authentication/security could be added using a token that could be refeshed in a given span time
 * Roles could also be added to the api to restrict specific users to accces certain endpoints  (assuming that potentially more could be added) 
