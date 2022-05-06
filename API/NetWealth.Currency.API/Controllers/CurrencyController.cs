@@ -55,7 +55,7 @@ namespace NetWealth.Currency.API.Controllers
                 return BadRequest(message);
             }
 
-            if (currencyConverterRequest.Amount > 0)
+            if (currencyConverterRequest.Amount <= 0)
             {
                 var message = "Amount must be set";
                 _logger.LogError($"Status Code { HttpStatusCode.BadRequest.GetHashCode() } - {message}");
