@@ -7,6 +7,7 @@ import { MessageService } from './message.service';
 import { Country } from 'src/app/models/country';
 import { CurrencyRequestModel } from 'src/app/models/currency-request';
 import { GlobalComponent } from 'src/app/globalComponent';
+import { CurrencyConverterResponse } from 'src/app/models/currencyConverterResponse';
 
 @Injectable({
   providedIn: 'root'
@@ -20,8 +21,6 @@ export class CurrenciesService {
 
   }
 
-  public products: Country[] = [];
-
   getCountryCurrencies(): Observable<Country[]>{
 
       let headers: HttpHeaders = new HttpHeaders();
@@ -34,16 +33,16 @@ export class CurrenciesService {
       );
   }
 
-  convertCurrency(postData: CurrencyRequestModel): Observable<Country[]>{
+  convertCurrency(postData: CurrencyRequestModel): Observable<CurrencyConverterResponse>{
 
      let headers: HttpHeaders = new HttpHeaders();
      headers = headers.append('apikey', this.key);
 
-      return this.http.post<Country[]>( this.apiUrl + "/currency/convert", postData, 
+      return this.http.post<CurrencyConverterResponse>( this.apiUrl + "/currency/convert", postData, 
       {headers:  headers }  )
         .pipe(
         tap(_ => this.log('fetched countries')),
-        catchError(this.handleError<Country[]>('getCountries', []))
+        catchError(this.handleError<CurrencyConverterResponse>('Currency Converter Response'))
       );
   }
 

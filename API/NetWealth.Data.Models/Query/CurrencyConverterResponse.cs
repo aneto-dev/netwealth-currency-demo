@@ -11,11 +11,9 @@ namespace NetWealth.Data.Models.Query
 
         public bool Success { get; set; }
 
+        public string ResponseDescription { get; set; }
+
         public string CurrencyDescription { get; set; }
-
-        public decimal ToCurrencyCurrentValue { get; set; }
-
-        public decimal FromCurrencyCurrentValue { get; set; }
     }
 
     public class Query

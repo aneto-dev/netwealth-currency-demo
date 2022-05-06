@@ -1,0 +1,6 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ffcabb3e_002D726e_002D481f_002D9e57_002D36f4a1c8e531/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="CurrencyConverterCommand_ConvertToCurrency" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::25116149-6C71-42E0-851D-F59DAA5060B5::net5.0::NetWealth.UnitTests.UnitTest1.CurrencyConverterCommand_ConvertToCurrency&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

@@ -20,16 +20,24 @@ namespace NetWealth.Services
 
         public async Task<CurrencyConverterResponse> GetCurrencyData(string toCurrencyConvertRequest, string baseCurrencyConvertRequest, decimal amount )
         {
-            var uri = new Uri( $"{_currencyConverterSettings.BaseUrl}convert?to={toCurrencyConvertRequest}&from={baseCurrencyConvertRequest}&amount={amount}");
-       
-            var clientTest = new RestClient(uri);
+            try
+            {
+                var uri = new Uri($"{_currencyConverterSettings.BaseUrl}convert?to={toCurrencyConvertRequest}&from={baseCurrencyConvertRequest}&amount={amount}");
 
-            var requestTest = new RestRequest();
-            requestTest.AddHeader("apikey", _currencyConverterSettings.ApiKey);
+                var clientTest = new RestClient(uri);
 
-            var responseTest = await clientTest.GetAsync<CurrencyConverterResponse>(requestTest);
+                var requestTest = new RestRequest();
+                requestTest.AddHeader("apikey", _currencyConverterSettings.ApiKey);
 
-            return responseTest;
+                var responseTest = await clientTest.GetAsync<CurrencyConverterResponse>(requestTest);
+
+                return responseTest;
+            }
+            catch (Exception e)
+            {
+                return new CurrencyConverterResponse() { Success = false, ResponseDescription = e.InnerException != null ? e.InnerException.ToString() : e.StackTrace };
+            }
+           
         }
 
     }

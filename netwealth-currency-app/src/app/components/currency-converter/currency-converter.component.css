@@ -57,3 +57,22 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
 {
   display: -webkit-inline-box;
 }
+
+.hidden {
+    display: none !important;
+    }
+
+    .iGrAod {
+        font-size: 3rem;
+        font-weight: 600;
+        color: rgb(46, 60, 87);
+        margin-bottom: 24px;
+    }
+
+    .gwvOOF {
+        color: rgb(92, 102, 123);
+        font-weight: 600;
+        margin: 0px;
+        font-size: 1.4rem;
+        max-width :100%;
+    }
